@@ -1,0 +1,25 @@
+{
+  "app_name": "DATA430_BatchPipeline_Project2",
+  "shuffle_partitions": 200,
+  "bad_records_path": "work/data/batch/_bad_records",
+  "silver_output_path": "work/data/silver",
+  "publish_postgres": true,
+  "postgres": {
+    "url": "jdbc:postgresql://pg:5432/etl",
+    "user": "postgres",
+    "password": "postgres",
+    "driver": "org.postgresql.Driver",
+    "mode": "overwrite",
+    "table_customers": "public.customers",
+    "table_products": "public.products",
+    "table_orders": "public.orders",
+    "table_customer_ltv": "public.customer_analytics",
+    "table_product_metrics": "public.product_metrics"
+  },
+  "source_postgres": {
+    "url": "jdbc:postgresql://pg:5432/etl",
+    "user": "postgres",
+    "password": "postgres",
+    "driver": "org.postgresql.Driver"
+  }
+}
